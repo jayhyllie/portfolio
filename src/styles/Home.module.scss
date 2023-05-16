@@ -1,0 +1,200 @@
+@import 'mixins';
+@import 'variables';
+
+.home {
+    @include flexEvenly(row);
+    padding: 0;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        h3 {
+            font-size: calc($fs-normal * 2);
+            opacity: 0;
+            animation: slideBottom .5s ease forwards;
+            animation-delay: .7s;
+    
+            &:nth-of-type(2) {
+                opacity: 0;
+                animation: slideTop .5s ease forwards;
+                animation-delay: .7s;
+            }
+        }
+        p {
+            font-size: $fs-normal;
+            opacity: 0;
+            animation: slideLeft .5s ease forwards;
+            animation-delay: .7s;
+        }
+    }
+    &__right {
+        @include gridCenter;
+        position: relative;
+        opacity: 0;
+        transition: all ease-in-out;
+        animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+        animation-delay: 2s, 3s;
+        scale: 1.2;
+
+        img {
+            position: absolute;
+            top: -32%;
+            left: 10%;
+            max-height: 400px;
+            clip-path: polygon(0 0, 100% 0, 100% 52%, 70% 100%, 30% 100%, 0% 52%);
+        }
+    }
+    &__btn {
+        max-width: 50%;
+        text-decoration: none;
+        letter-spacing: 1.5px;
+        background: $clr-accent;
+        border: 2px solid $clr-accent;
+        border-radius: 2em;
+        box-shadow: 0 0 20px $clr-accent;
+        color: $clr-bg;
+        padding: .5em 2em;
+        opacity: 0;
+        animation: slideTop 1s ease forwards;
+        animation-delay: 1s;
+    }
+    &__headline {
+        font-size: calc($fs-h2 * 2);
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+        animation-delay: 1s;
+    }
+}
+.multiple__text div {
+    color: $clr-accent !important;
+}
+
+.social__media {
+    display: flex;
+    gap: 1em;
+    padding: 2em 0;
+
+    a {
+        @include gridCenter;
+        width: 40px;
+        aspect-ratio: 1;
+        background: transparent;
+        border: 2px solid $clr-accent;
+        border-radius: 50%;
+        font-size: $fs-h3;
+        color: $clr-accent;
+        text-decoration: none;
+        transition: .5 ease;
+        opacity: 0;
+        cursor: pointer;
+        animation: slideLeft .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+
+        &:nth-of-type(1) {
+            --i: 7;
+        }
+        &:nth-of-type(2) {
+            --i: 8;
+        }
+        &:hover {
+            background: $clr-accent;
+            box-shadow: 0 0 20px $clr-accent;
+        }
+
+        &:hover svg {
+            fill: $clr-bg;
+        }
+
+        svg {
+            width: 24px;
+            aspect-ratio: 1;
+            fill: $clr-accent;
+        }
+    }
+}
+.profile {
+    width: 25rem;
+    height: 25rem;
+    border-left: 12.5rem solid transparent;
+    border-right: 12.5rem solid transparent;
+    border-top: 25rem solid $clr-accent;
+    display: grid;
+    place-content: center;
+}
+
+/* MQ */
+@media screen and (max-width: 35em) {
+    
+}
+/* ANIMATIONS */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

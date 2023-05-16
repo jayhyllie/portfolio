@@ -1,0 +1,44 @@
+@import 'mixins';
+@import 'variables';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  background-color: $background-color--main;
+  color: $clr-text;
+  font-family: $font-family-headings;
+}
+body,
+button,
+input,
+textarea {
+  font-size: $fs-normal;
+  font-family: $font-family-headings;
+}
+
+.red {
+  color: $skills-red;
+}
+.yellow {
+  color: $skills-yellow;
+}
+.blue {
+  color: $skills-blue;
+}
+.lightblue {
+  color: $skills-lightBlue;
+}
+.green {
+  color: $skills-green;
+}
+.orange {
+  color: $skills-orange;
+}

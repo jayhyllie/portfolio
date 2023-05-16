@@ -1,0 +1,36 @@
+@import 'mixins';
+@import 'variables';
+
+.contact {
+    min-height: 100vh;
+    max-width: 75vw;
+    @include gridColumns(1fr 1fr);
+    align-items: center;
+    gap: 6em;
+    padding: 4em 0;
+    margin: 0 auto;
+
+    &__info {
+        @include flexStart(column);
+        gap: 2em;
+    }
+
+    h2, h3, h4 {
+        font-family: $font-family-headings;
+    }
+    h2 {
+        font-size: clamp(4rem, 7rem, 12rem);
+        font-weight: 300;
+        color: $clr-accent;
+    }
+    h3 {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    h4 {
+        font-size: 1.5em;
+        font-weight: 200;
+        line-height: 2;
+        text-align: right;
+    }
+}

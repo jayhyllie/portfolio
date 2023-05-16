@@ -1,0 +1,10 @@
+@import 'variables';
+
+.headline {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-family-headline;
+  font-size: $fs-h1;
+}

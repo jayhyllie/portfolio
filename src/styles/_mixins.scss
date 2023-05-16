@@ -1,0 +1,70 @@
+@import "variables";
+
+@mixin gridCenter {
+    display: grid;
+    place-content: center;
+}
+@mixin gridColumns($columns) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-auto-rows: auto;
+}
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexSpaceBetween($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexEvenly($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@mixin flexStart($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: baseline;
+    align-items: flex-start;
+}
+
+@mixin bgImageContain($position) {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: $position;
+}
+
+@mixin pageContainer($background-color) {
+    background-color: $background-color;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+@mixin container {
+    max-width: 1080px;
+    padding-left: 7em;
+    margin: 0 auto;
+}
+
+@mixin section {
+    padding-block: 7rem 2rem;
+}
+
+@mixin section__title {
+    font-size: $fs-h1;
+    margin-left: .875rem;
+    position: relative;
+}
+
+@mixin borderSpecial($rotate) {
+    border-bottom: 1px solid $clr-accent;
+    border-left: 1px solid $clr-accent;
+    transform: rotate($rotate);
+}

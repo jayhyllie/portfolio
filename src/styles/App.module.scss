@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'mixins';
+
+#root {
+  @include gridCenter;
+  @include pageContainer($background-color--main);
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: $clr-text;
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  max-width: calc(100% / 2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a,
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+  transition: all .5s ease;
+  color: $clr-text;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $clr-accent;
+}
+
+.main {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.main > * {
+  min-height: 100vh;
+  isolation: isolate;
+  position: relative;
+}
