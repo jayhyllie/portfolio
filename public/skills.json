@@ -1,32 +1,32 @@
 [
     {
         "name": "HTML 5",
-        "image": "./src/assets/html.png",
+        "image": "./images/html.png",
         "color": "red"
     },
     {
         "name": "CSS 3",
-        "image": "./src/assets/css-3.png",
+        "image": "./images/css-3.png",
         "color": "blue"
     },
     {
         "name": "JavaScript ES6",
-        "image": "./src/assets/javascript.png",
+        "image": "./images/javascript.png",
         "color": "yellow"
     },
     {
         "name": "ReactJS",
-        "image": "./src/assets/react.png",
+        "image": "./images/react.png",
         "color": "lightblue"
     },
     {
         "name": "nodeJS",
-        "image": "./src/assets/node.png",
+        "image": "./images/node.png",
         "color": "green"
     },
     {
         "name": "UX / UI",
-        "image": "./src/assets/ux-ui-logo.svg",
+        "image": "./images/ux-ui-logo.svg",
         "color": "orange"
     }
 ]
