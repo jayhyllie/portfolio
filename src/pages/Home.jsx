@@ -34,7 +34,7 @@ function Home() {
                         </svg>
                     </a>
                 </section>
-                <a href="./Joakim_Sundman.pdf" className={style.home__btn}>Download CV</a>
+                <a href="./Joakim_Sundman.pdf" className={style.home__btn} download>Download CV</a>
             </section>
             <section className={style.home__right}>
                 <div className={style.profile}></div>
