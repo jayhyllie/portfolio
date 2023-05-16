@@ -5,7 +5,7 @@ import SkillsCard from "../components/SkillsCard";
 const Skills = () => {
   const [data, setData] = useState([]);
   const getData = () => {
-    fetch("../../skills.json", {
+    fetch("./skills.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
