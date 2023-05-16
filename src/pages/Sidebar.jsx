@@ -25,7 +25,7 @@ const Sidebar = () => {
                 </div>
             </nav>
 
-            <div className="nav__footer">
+            <div className="aside__footer">
                 <span className={style.copyright}>&copy; 2023</span>
             </div>
         </aside>

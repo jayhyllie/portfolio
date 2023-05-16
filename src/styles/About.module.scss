@@ -27,3 +27,13 @@
 .purple {
     color: $clr-accent;
 }
+
+@media screen and (max-width: 50em) {
+    .about__section {
+        grid-template-columns: 100%;
+        gap: 2em;
+    }
+    .about__figure {
+        background-size: 66%;
+    }
+  }

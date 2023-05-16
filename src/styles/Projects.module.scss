@@ -2,10 +2,10 @@
 @import "variables";
 
 .projects {
-    min-height: 100vh;
-    max-width: 80vw;
-    @include gridCenter;
-    margin: 0 auto;
+  min-height: 100vh;
+  max-width: 80vw;
+  @include gridCenter;
+  margin: 0 auto;
   &__grid {
     @include gridColumns(1fr 1fr);
     gap: 3em;
@@ -13,49 +13,57 @@
 }
 
 .card {
-    @include flexStart(column);
-    gap: 1em;
-    padding-bottom: 2em;
-    border: 1px solid $clr-accent;
-    h2 {
-        padding: 0 2em;
-    }
-    &:hover {
-        color: $clr-text;
-    }
-    &__image {
-        max-width: 35em;
-        aspect-ratio: 2 / 1.2;
-    }
-    &__langList {
-        @include flexStart(row);
-        justify-content: center;
-        gap: 2em;
-        margin: 0 auto;
+  @include flexStart(column);
+  gap: 1em;
+  padding-bottom: 2em;
+  border: 1px solid $clr-accent;
+  h2 {
+    padding: 0 2em;
+  }
+  &:hover {
+    color: $clr-text;
+  }
+  &__image {
+    max-width: 35em;
+    aspect-ratio: 2 / 1.2;
+  }
+  &__langList {
+    @include flexStart(row);
+    justify-content: center;
+    gap: 2em;
+    margin: 0 auto;
 
-        span {
-            border: none;
-            padding: .3em 1em;
-            border-radius: .5em;
-        }
+    span {
+      border: none;
+      padding: 0.3em 1em;
+      border-radius: 0.5em;
     }
+  }
 }
 .html {
-    background-color: $skills-red;
+  background-color: $skills-red;
 }
 .css {
-    background-color: $skills-blue;
+  background-color: $skills-blue;
 }
 .js {
-    background-color: $skills-yellow;
+  background-color: $skills-yellow;
 }
 .react {
-    background-color: $skills-lightBlue;
+  background-color: $skills-lightBlue;
 }
 
-
 @media screen and (max-width: 1600px) {
-    .card__image {
-        max-width: 25em;
-    }
+  .card__image {
+    max-width: 25em;
+  }
+}
+@media screen and (max-width: 50em) {
+  .projects__grid {
+    grid-template-columns: 100%;
+  }
+  .card__image {
+    max-width: 20em;
+    aspect-ratio: 2 / 1.3;
+  }
 }

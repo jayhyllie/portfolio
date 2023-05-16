@@ -124,8 +124,42 @@
 }
 
 /* MQ */
-@media screen and (max-width: 35em) {
-    
+@media screen and (max-width: 50em) {
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2em;
+
+        &__left {
+            min-width: 100%;
+        }
+
+        &__right{
+            img {
+                top: 0%;
+                left: 20%;
+                max-height: 120px;
+                clip-path: polygon(0 0, 100% 0, 100% 52%, 70% 100%, 30% 100%, 0% 52%);
+            }
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: calc($fs-normal * 1.5);
+        }
+        &__btn {
+            max-width: 60%;
+            text-align: center;
+        }
+    }
+    .profile {
+        width: 10rem;
+        height: 10rem;
+        border-top: 10rem solid $clr-accent;
+        border-left: 5rem solid transparent;
+        border-right: 5rem solid transparent;
+    }
 }
 /* ANIMATIONS */
 

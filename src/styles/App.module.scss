@@ -54,3 +54,9 @@ a:hover {
   isolation: isolate;
   position: relative;
 }
+@media screen and (max-width: 50em) {
+  .main {
+    gap: 8em;
+    padding: 0 1em;
+  }
+}

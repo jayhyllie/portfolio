@@ -13,16 +13,6 @@
     @include flexSpaceBetween(column);
     z-index: 10;
 }
-@media screen and (max-width: 35em) {
-    .aside {
-        max-height: 10vh;
-        max-width: 100%;
-
-        img {
-            max-width: 10%;
-        }
-    }
-}
 
 .nav__list {
     display: flex;
@@ -39,4 +29,21 @@
     font-size: $fs-small;
     transform: rotate(-180deg);
     writing-mode: vertical-rl;
+}
+@media screen and (max-width: 50em) {
+    .aside {
+        min-height: auto;
+        max-width: 100%;
+        padding: 1em 2em;
+
+        img {
+            max-width: 10%;
+        }
+        &__footer, .copyright {
+            display: none !important;
+        }
+    }
+    .nav__list {
+        display: none;
+    }
 }

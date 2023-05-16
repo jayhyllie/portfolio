@@ -1,53 +1,66 @@
-@import 'mixins';
-@import 'variables';
+@import "mixins";
+@import "variables";
 
 .skills {
-    min-height: 100vh;
-    max-width: 70vw;
-    @include gridCenter;
+  min-height: 100vh;
+  max-width: 70vw;
+  @include gridCenter;
+  gap: 2em;
+  padding: 0 4em;
+  margin: 0 auto;
+  ul {
+    @include gridColumns(1fr 1fr 1fr);
+    place-content: center;
     gap: 2em;
-    padding: 0 4em;
-    margin: 0 auto;
-    ul {
-        @include gridColumns(1fr 1fr 1fr);
-        place-content: center;
-        gap: 2em;
-    }
-    &__card {
-        @include flexSpaceBetween(row);
-        padding: 2em;
-        text-align: left;
-        box-shadow: 0 0 1em $clr-text-dark;
-        border: 1px solid;
-        border-style: dotted;
-        max-height: 170px;
+  }
+  &__card {
+    @include flexSpaceBetween(row);
+    padding: 2em;
+    text-align: left;
+    box-shadow: 0 0 1em $clr-text-dark;
+    border: 1px solid;
+    border-style: dotted;
+    max-height: 170px;
 
-        &:first-of-type {
-            border-color: $skills-red;
-        }
-        &:nth-of-type(2) {
-            border-color: $skills-blue;
-        }
-        &:nth-of-type(3) {
-            border-color: $skills-yellow;
-        }
-        &:nth-of-type(4) {
-            border-color: $skills-lightBlue;
-        }
-        &:nth-of-type(5) {
-            border-color: $skills-green;
-        }
-        &:nth-of-type(6) {
-            border-color: $skills-orange;
-        }
-        h5 span {
-            font-size: $fs-h2;
-        }
-        img {
-            max-height: 100px;
-            aspect-ratio: 1;
-            object-fit: contain;
-        }
+    &:first-of-type {
+      border-color: $skills-red;
     }
+    &:nth-of-type(2) {
+      border-color: $skills-blue;
+    }
+    &:nth-of-type(3) {
+      border-color: $skills-yellow;
+    }
+    &:nth-of-type(4) {
+      border-color: $skills-lightBlue;
+    }
+    &:nth-of-type(5) {
+      border-color: $skills-green;
+    }
+    &:nth-of-type(6) {
+      border-color: $skills-orange;
+    }
+    h5 span {
+      font-size: $fs-h2;
+    }
+    img {
+      max-height: 100px;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+  }
 }
-
+@media screen and (max-width: 50em) {
+  .skills {
+    &__card {
+        padding: 2em 4em;
+        width: 90vw;
+    }
+  }  
+  .skills ul {
+    grid-template-columns: 100%;
+  }
+  .skills img {
+    max-height: 70px;
+  }
+}
